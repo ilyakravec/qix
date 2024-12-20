@@ -1,0 +1,225 @@
+@import '../variables';
+
+.contacts-pg {
+	padding-top: $xxxl;
+
+
+	&__inner {
+		margin-bottom: calc($index * 2.26);
+	}
+
+	&__title {
+		@include roboto-flex;
+		font-size: calc($index * 4.1);
+		font-weight: 700;
+		color: $dark;
+	}
+
+	&__inf {
+		display: flex;
+		column-gap: calc($index * 1.8);
+	}
+
+	&__item {
+		display: flex;
+		column-gap: $x-sm;
+
+
+		img {
+			width: calc($index * 3);
+		}
+
+		.footer__inner {
+			&.pg-contacts {
+				color: $dark;
+			}
+		}
+
+		&:last-child {
+			padding: $x2-sm $md;
+
+			background-color: $lighter;
+			border-radius: $md;
+
+			img {
+				width: calc($index * 2.4);
+			}
+		}
+	}
+
+	&__cards {
+		color: $dark;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		row-gap: calc($x-sm / 3);
+
+	}
+
+	&__number {
+		@include roboto-flex;
+		letter-spacing: -1px;
+
+		font-weight: 700;
+		font-size: $md;
+	}
+
+	&__subtext {
+		color: $gray-4;
+	}
+
+	&__social {
+		display: flex;
+		column-gap: calc($index * .4);
+	}
+
+}
+
+
+.contact {
+	&.pg-contacts {
+		padding-top: 0px;
+
+	}
+
+	&__question {
+
+		&.pg-contacts {
+			width: calc($index * 25);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+
+	}
+
+	.question {
+		&__text {
+			&.pg-contacts {
+				width: calc($index * 20);
+
+			}
+		}
+	}
+
+	&__textarea {
+		width: 100%;
+		min-height: calc($index * 8.6);
+		padding: $x-sm;
+
+		border-radius: $x-sm;
+		background-color: $light;
+
+		color: $dark;
+		resize: none;
+
+		margin-bottom: $x-sm;
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
+
+	.advice__btn {
+		&.pg-contacts {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.advice__title {
+		&.pg-contacts {
+			font-size: calc($index * 1.45);
+		}
+	}
+
+
+}
+
+// requisites
+
+
+.requisites {
+
+	margin-bottom: $xxxl;
+	color: $dark;
+
+
+	&__top {
+		display: flex;
+		align-items: center;
+		column-gap: $lg;
+
+		margin-bottom: calc($index * 1.35);
+
+
+	}
+
+	&__title {
+		@include roboto-flex;
+		font-weight: 700;
+		font-size: $xl ;
+		line-height: 90%;
+	}
+
+	&__download {
+		@include roboto-flex;
+		font-weight: 700;
+
+		letter-spacing: -1px;
+		padding-left: calc($index * 1.3);
+
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: calc($index * -.4);
+
+			z-index: 1;
+			background: url('/images/src/download.png') center no-repeat;
+			width: $md;
+			height: $md;
+		}
+	}
+
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: calc($x-sm /2);
+	}
+
+	&__item {
+		padding: $x-sm $md;
+
+		border-radius: $x-sm;
+		background-color: $lighter;
+
+		display: flex;
+
+		column-gap: $x-sm;
+
+
+	}
+
+	&__name {
+		color: $gray-2;
+		width: 20%;
+	}
+
+	&__inf {
+		width: 80%;
+	}
+
+
+
+}
+
+// requisites

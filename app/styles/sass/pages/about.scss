@@ -1,0 +1,273 @@
+@import '../variables';
+@import '../nullifier';
+
+
+.about-company {
+	color: $dark;
+	padding-top: $xxxl;
+
+	margin-bottom: $xxxl;
+
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: calc($index * 2.26);
+
+	}
+
+	&__rewards {
+		display: flex;
+		text-align: center;
+	}
+
+	&__title {
+		@include roboto-flex;
+
+		font-size: $xxxl;
+		font-weight: 700;
+		line-height: 75%;
+		margin-bottom: $lg;
+	}
+
+	&__text {
+		line-height: 150%;
+		width: calc($index * 35);
+	}
+
+	&__rewards {
+		display: flex;
+		column-gap: $x-sm;
+	}
+
+}
+
+.reward {
+	&__item {
+		width: calc($index * 3.5);
+	}
+
+	&__number {
+		min-height: calc($index * 3.12);
+
+		display: flex;
+		align-items: center;
+		position: relative;
+		justify-content: center;
+
+		@include roboto-flex;
+		font-weight: 700;
+		letter-spacing: -1px;
+		font-size: $x-sm;
+
+		&::after {
+			display: block;
+			content: '';
+
+			background: url('/images/src/reward.svg') center no-repeat;
+			background-size: cover;
+
+			height: calc($index * 2.7);
+			width: calc($index * 3.5);
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			left: 0;
+			margin: auto;
+
+			z-index: 4;
+		}
+	}
+
+	&__text {
+		font-size: calc($index * .635);
+	}
+}
+
+// about - company 
+
+
+// our mission
+.our-mission {
+	color: $light;
+	background-color: $dark;
+	border-radius: $lg;
+
+	&__inner {
+		padding: calc($index * 2.26);
+		display: flex;
+		column-gap: $md;
+
+		position: relative;
+	}
+
+	&__left {
+		width: 64%;
+	}
+
+	&__text {
+		&.left {
+			@include roboto-flex;
+			font-size: $xxl;
+			line-height: 80%;
+
+			span {
+				font-weight: 700;
+			}
+		}
+
+		&.right {
+			font-size: $x2-sm;
+			line-height: 140%;
+		}
+
+	}
+
+	&__right {
+		width: 36%;
+	}
+
+	&__img {
+		position: absolute;
+		bottom: calc($index * -3);
+		right: calc($index * 5);
+		z-index: 2;
+
+		img {
+			width: calc($index * 14);
+		}
+	}
+}
+
+
+// our mission
+
+// ready
+
+
+
+.ready {
+	color: $dark;
+	margin-bottom: $xxxl;
+
+	&__title {
+		@include roboto-flex;
+		font-weight: 700;
+		line-height: 75%;
+		text-align: center;
+		font-size: calc($index * 5.6);
+
+		margin-bottom: calc($index * 2);
+	}
+
+	&__text {
+		text-align: center;
+		width: calc($index * 40.5);
+		margin: auto;
+
+		margin-bottom: calc($index * 1.8);
+	}
+
+	&__slider {
+		position: relative;
+		width: 100%;
+		/* Ширина слайдера */
+		overflow: hidden;
+		/* Скрываем элементы, выходящие за пределы контейнера */
+
+		&__inner {
+			display: flex;
+			/* Делаем контейнер слайдера flex-контейнером */
+			white-space: nowrap;
+			/* Запрещаем перенос строк */
+
+			will-change: transform;
+			position: relative;
+			/* Устанавливаем относительное позиционирование */
+			/* Скрываем элементы, выходящие за пределы контейнера */
+			@include roboto-flex;
+
+			font-weight: 700;
+			font-size: $md;
+			letter-spacing: -1px;
+
+			white-space: nowrap;
+		}
+
+
+		&.dark {
+			background-color: $dark;
+			color: $light;
+
+			transform: rotate(4deg) translateY(50px);
+
+			position: relative;
+			z-index: 2;
+		}
+
+		&.white {
+			background-color: $lighter;
+			color: $dark;
+
+			position: relative;
+
+			transform: rotate(-4deg) translateY(-50px);
+			z-index: 1;
+
+			// transform: translateY(-50px);
+		}
+	}
+
+	@keyframes slideIn {
+		0% {
+			transform: translateX(-100%); // Начинаем с левой стороны
+			opacity: 0; // Прозрачность 0
+		}
+
+		100% {
+			transform: translateX(0); // Конечная позиция
+			opacity: 1; // Прозрачность 1
+		}
+	}
+
+	&__item {
+		padding: $md;
+		line-height: 100%;
+	}
+}
+
+// ready
+
+
+// relationship
+
+.relationship {
+	padding: calc($index * 3) 0;
+
+	border-radius: $xl;
+	background-color: $lighter;
+	color: $dark;
+
+	&__title {
+		@include roboto-flex;
+		font-weight: 700;
+		font-size: $xl;
+		letter-spacing: -1px;
+		line-height: 90%;
+
+		margin-bottom: calc($index * .9);
+	}
+
+	&__text {
+		margin-bottom: calc($index * 1.8);
+	}
+
+}
+
+
+
+// relationship

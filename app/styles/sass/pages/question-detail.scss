@@ -1,0 +1,247 @@
+@import '../variables';
+@import '../nullifier';
+
+
+.question-detail {
+
+	padding-top: $xxxl;
+
+
+	&__back {
+		display: inline-block;
+		color: $dark;
+		padding-left: calc($index * 1.5);
+		position: relative;
+
+		@include roboto-flex;
+		letter-spacing: -1px;
+
+		font-weight: 700;
+
+		font-size: calc($index * 1.27);
+
+		margin-bottom: calc($index * 1.8);
+
+		&::after {
+			position: absolute;
+
+			content: '';
+			display: block;
+
+			width: $md;
+			height: $md;
+
+			background: url('/images/src/arrow-left.svg') center no-repeat;
+			background-size: cover;
+
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0px;
+
+		}
+	}
+
+
+	.answer-detail__comment {
+		margin-bottom: $xxl;
+	}
+
+	.answer {
+		margin-bottom: $xxxl;
+
+		&__comments {
+			margin-left: calc($index * 1.5);
+
+			&__bottom {
+				position: relative;
+			}
+		}
+
+		&__inner {
+			display: flex;
+			column-gap: calc($lg * 2);
+		}
+
+		&__col {
+			width: 57%;
+		}
+
+		.popular-question {
+			background-color: transparent;
+			width: 38%;
+			margin-top: $xxl;
+			color: $dark;
+
+			&__item {
+				padding-top: $x-sm;
+				padding-bottom: $x-sm;
+				border-bottom: 1px solid $gray-3;
+
+				&:last-child {
+					border-bottom: 0px;
+					padding-bottom: 0px;
+
+				}
+			}
+
+			&__title {
+				@include roboto-flex;
+				font-weight: 700;
+				font-size: calc($index * 1.27);
+
+				letter-spacing: -1px;
+				margin-top: 0px;
+				margin-bottom: calc($index * .9);
+			}
+
+			&__date {
+				color: $gray-2;
+				margin-bottom: $x-sm;
+			}
+
+			&__text {
+				margin-bottom: $x-sm;
+			}
+
+			&__answers {
+				@include roboto-flex;
+				font-weight: 700;
+				letter-spacing: -1px;
+
+			}
+
+			&__inner {
+				padding: calc($index * 1.35);
+
+				border-radius: $md;
+				background-color: $lighter;
+			}
+		}
+
+		&__item {
+			color: $dark;
+			margin-bottom: calc($index * 1.8);
+		}
+
+		&__user {
+			display: flex;
+			align-items: center;
+			column-gap: $x-sm;
+
+			margin-bottom: $md;
+		}
+
+		&__text {
+			margin-bottom: $md;
+			line-height: 150%;
+		}
+
+		.user {
+			&__name {
+				font-weight: 700;
+				@include roboto-flex;
+				letter-spacing: -1px;
+				font-size: calc($index * .9);
+			}
+
+			&__post {
+				color: $gray-2;
+			}
+		}
+
+		&__link {
+			font-weight: 700;
+			@include roboto-flex;
+			letter-spacing: -1px;
+		}
+
+		&__likes {
+			color: $gray-2;
+			display: flex;
+			align-items: center;
+			column-gap: calc($x-sm / 2);
+		}
+
+		.like-button {
+			display: flex;
+			align-items: center;
+
+			&.active {
+				svg {
+					path {
+						stroke: #00953B;
+					}
+
+				}
+			}
+
+			svg {
+				height: $md;
+				width: $md;
+			}
+		}
+
+		&__bottom {
+			display: flex;
+			align-items: center;
+			column-gap: $lg;
+		}
+
+		&__textarea {
+			width: 100%;
+			resize: none;
+			min-height: calc($index * 9);
+
+			padding: $x-sm;
+
+			border-radius: $md;
+			background-color: $lighter;
+
+		}
+
+		&__btn {
+			@include button;
+			background-color: $dark;
+			color: $light;
+			position: absolute;
+
+			bottom: 25px;
+			right: 15px;
+
+			z-index: 5;
+		}
+
+	}
+
+}
+
+.view-more {
+	color: $dark;
+	margin-bottom: $xxxl;
+
+	&__title {
+		font-weight: 700;
+		@include roboto-flex;
+		letter-spacing: -1px;
+		font-size: $xl;
+		line-height: 75%;
+
+		margin-bottom: calc($index * 1.8);
+	}
+
+	.question__comments {
+
+		&.view-more {
+
+			display: grid;
+			grid-template: 1fr / 1fr 1fr;
+			gap: $md;
+
+			.comment__item {
+				margin-bottom: 0px
+			}
+		}
+
+	}
+
+}

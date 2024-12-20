@@ -1,0 +1,84 @@
+@import '../variables';
+@import '../nullifier';
+
+
+
+// header
+
+
+.header {
+	&.pg-cases {
+		color: $dark;
+	}
+
+	.nav__btn {
+		&.pg-cases {
+			background-color: $lighter;
+		}
+	}
+}
+
+// header
+
+
+.breadcrumbs {
+
+	&.white {
+		margin-top: $lg;
+		margin-bottom: calc($index * 1.35);
+
+
+		.breadcrumbs__item {
+			color: $gray-5;
+		}
+	}
+}
+
+// services
+
+
+.services {
+
+	&.pg-cases {
+		padding: $xxxl 0 0 0;
+	}
+
+	&__top__title {
+		&.pg-cases {
+
+			width: calc($index * 30);
+			font-size: calc($index * 3.8);
+			line-height: 75%;
+
+			margin-bottom: calc($index * 2.26);
+		}
+	}
+
+
+	.services__item {
+		&.pg-cases {
+			grid-column: span 2;
+
+
+			&.white {
+				background-color: $lighter;
+			}
+		}
+	}
+
+}
+
+// services
+
+
+// footer
+
+.footer {
+
+	&.pg-cases {
+		padding: calc($index * 2.26) 0;
+		color: $dark;
+	}
+}
+
+// footer

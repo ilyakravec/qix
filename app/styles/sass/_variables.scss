@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,125,100..1000&display=swap');
+
+// vars
+$index: calc(1vw + 1vh);
+
+$breakpoint-xs: 0px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$primary-font: "Onest";
+$secondary-font: "Roboto Flex", system-ui;
+$thirdy-font: "Akony", sans-serif;
+
+// colors
+
+$light: #FFFFFF;
+$lighter: #F6F8FA;
+$accent: #299EC2;
+
+$green: #71E69B;
+$red: #FF5050;
+$gray: #343434;
+$gray-2: #818793;
+$gray-3: #E5E7EB;
+$gray-4: #6B7280;
+$gray-5: #9CA3AF;
+
+
+$dark: #0C0C0C;
+
+$darker: #6B7280;
+
+// fonts sizing
+$x-sm: calc($index * .700); // 16px
+$x2-sm: calc($index * .825); // 18px
+$sm: calc($index * 1.1); //
+$md: calc($index * 1.08); //24px
+$lg: calc($index * 1.6); //35px
+$xl: calc($index * 2.44); //56px
+$xxl: calc($index * 2.72); //60px
+$xxxl: calc($index * 4.2); //97px
+$xxxxl: calc($index * 6.4); //142
+$x5l: calc($index * 7.3); //175px
+$x6l: calc($index * 12.25); //175px
+
+// calc($index * 2.26) 50px
+// calc($index * .45) 10px
+// calc($index * 3.6) 80px
+// calc($index * 1.8) 40px
+// calc($index * 1.35);//30px
+// calc($index * 1.27);// 28px
+
+$margin-sm-sm: calc($index * 1.08); //24px
+$margin-sm: 30px;
+$margin-md: calc($index * 1.8);
+$margin-lg: calc($index * 2.72); //60px
+$margin-xl: calc($index * 3);
+$margin-xxl: calc($index * 3.6);
+$margin-xxxl: calc($index * 5.6);
+
+
+// font mask
+
+@font-face {
+	font-family: "Onest";
+	src: url('../../fonts/Onest/static/Onest-Regular.woff');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Onest";
+	src: url('../../fonts/Onest/static/Onest-Medium.woff');
+	font-weight: 500;
+}
+
+
+@font-face {
+	font-family: "Akony";
+	src: url('../../fonts/Akony/AKONY.woff');
+	font-weight: 400;
+}
+
+@mixin roboto-flex {
+	font-family: "Roboto Flex", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"wdth" 151,
+		"GRAD" 0,
+		"XOPQ" 96,
+		"XTRA" 468,
+		"YOPQ" 79,
+		"YTAS" 750,
+		"YTDE" -203,
+		"YTFI" 738,
+		"YTLC" 514,
+		"YTUC" 712;
+
+	letter-spacing: -5px;
+}
+
+@mixin button {
+	@include roboto-flex;
+	font-weight: 700;
+
+	letter-spacing: -1px;
+
+	padding: calc($index * .9) $lg;
+	background-color: $light;
+	border-radius: $x-sm;
+
+	text-align: center;
+
+	color: $dark;
+
+}

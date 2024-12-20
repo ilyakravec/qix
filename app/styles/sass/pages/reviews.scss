@@ -1,0 +1,77 @@
+@import '../variables';
+@import '../nullifier';
+
+
+// reviews
+
+.reviews-pg {
+
+	padding-top: $xxxl;
+
+	color: $dark;
+
+	&__title {
+		@include roboto-flex;
+		font-weight: 700;
+		font-size: calc($index * 4);
+
+		&-small {
+			@include roboto-flex;
+			font-weight: 700;
+			font-size: $xl;
+			margin-bottom: calc($index * 1.8);
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: end;
+		margin-bottom: calc($index * 1.8);
+	}
+
+	&__left {
+		width: 80%;
+	}
+
+	&__right {
+		width: 20%;
+	}
+
+	&__rewards {
+		display: flex;
+		justify-content: end;
+	}
+
+	.reviews__card {
+		&.pg-article-detail {
+			&.pg-reviews {
+				margin-bottom: $md;
+			}
+		}
+	}
+
+	&__button {
+		width: 100%;
+		padding: $md $lg;
+
+		border-radius: calc($md / 2);
+		border: 1px solid $dark;
+
+		background-color: transparent;
+
+
+		@include roboto-flex;
+		font-weight: 700;
+		letter-spacing: -1px;
+		color: $dark;
+
+
+	}
+
+	&__cards {
+		margin-bottom: $xxxl;
+	}
+}
+
+
+// reviews

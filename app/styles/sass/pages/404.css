@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,125,100..1000&display=swap");
+@font-face {
+  font-family: "Onest";
+  src: url("../../fonts/Onest/static/Onest-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../../fonts/Onest/static/Onest-Medium.woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Akony";
+  src: url("../../fonts/Akony/AKONY.woff");
+  font-weight: 400;
+}
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 0s 600000s, color 0s 600000s !important;
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+  margin-bottom: 0px;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+.error {
+  color: #0C0C0C;
+  padding-top: calc((1vw + 1vh) * 4.2);
+}
+.error__error {
+  position: relative;
+}
+.error__title {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 151, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  letter-spacing: -5px;
+  font-weight: 700;
+  font-size: calc((1vw + 1vh) * 4.2);
+}
+.error__text {
+  width: calc((1vw + 1vh) * 22);
+  margin-bottom: calc((1vw + 1vh) * 1.08 * 2);
+}
+.error__btn {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 151, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  letter-spacing: -5px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding: calc((1vw + 1vh) * 0.9) calc((1vw + 1vh) * 1.6);
+  background-color: #FFFFFF;
+  border-radius: calc((1vw + 1vh) * 0.7);
+  text-align: center;
+  color: #0C0C0C;
+  background-color: #0C0C0C;
+  color: #FFFFFF;
+}
+.error img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc((1vw + 1vh) * 2);
+  z-index: 1;
+}

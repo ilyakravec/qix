@@ -1,0 +1,155 @@
+@import '../variables';
+@import '../nullifier';
+
+.question {
+	padding-top: $xxxl;
+
+	&__inner {
+		display: flex;
+		column-gap: $xl;
+	}
+
+	&__comments {
+		color: $dark;
+		display: flex;
+		flex-direction: column;
+
+		row-gap: $md;
+	}
+
+	&__left {
+		width: 59%;
+	}
+
+	&__right {
+		width: 38%;
+		color: $dark;
+	}
+
+	.ask {
+		padding: calc($index * 1.35);
+
+		border-radius: $md;
+
+		background-color: $dark;
+		color: $light;
+
+		margin-bottom: calc($index * 1.8);
+
+		&__title {
+			font-size: $lg;
+			@include roboto-flex;
+			font-weight: 700;
+			margin-bottom: calc($index * .5);
+		}
+
+		&__text {
+			color: rgba($light, .7);
+
+			margin-bottom: calc($index * .9);
+		}
+
+		&__form {
+			display: flex;
+			flex-direction: column;
+			row-gap: calc($index * .5);
+		}
+
+		&__input {
+			width: 100%;
+			padding: calc($index * .9) $x-sm;
+			background: $light;
+
+			border-radius: calc($md / 2);
+
+			color: $dark;
+
+		}
+
+		&__textarea {
+			min-height: calc($index * 8.5);
+			width: 100% !important;
+
+			padding: $x-sm ;
+			background: $light;
+			border-radius: calc($md / 2);
+
+			color: $dark;
+
+			resize: none;
+
+			margin-bottom: $md;
+		}
+
+		&__btn {
+			@include button;
+
+			background-color: transparent;
+			color: $light;
+
+			border: 1px solid $light;
+			margin-bottom: $md;
+		}
+
+
+		&__agreement {
+			font-size: calc($index * .635);
+			color: rgba($light, .5);
+		}
+	}
+
+	.specialist {
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			row-gap: $x-sm;
+		}
+
+		&__logo {
+			img {
+				width: 100% !important;
+			}
+		}
+
+		&__title {
+			font-weight: 700;
+			@include roboto-flex;
+			letter-spacing: -1px;
+			font-size: calc($index * 1.27);
+
+			margin-bottom: calc($index * .9);
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			column-gap: $x-sm;
+
+			padding: calc($index * .9);
+
+			border-radius: $md;
+			background-color: $lighter;
+		}
+
+		&__text {
+			color: $gray-2;
+
+			&.bold {
+
+				@include roboto-flex;
+				letter-spacing: -1px;
+				font-weight: 700;
+				font-size: calc($index * .9);
+				color: $dark;
+
+			}
+		}
+
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			row-gap: calc($index * .2);
+		}
+	}
+}

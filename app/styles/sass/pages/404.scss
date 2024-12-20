@@ -1,0 +1,37 @@
+@import '../variables';
+@import '../nullifier';
+
+
+.error {
+	color: $dark;
+	padding-top: $xxxl;
+
+	&__error {
+		position: relative;
+	}
+
+	&__title {
+		@include roboto-flex;
+		font-weight: 700;
+		font-size: $xxxl;
+	}
+
+	&__text {
+		width: calc($index * 22);
+		margin-bottom: calc($md * 2);
+	}
+
+	&__btn {
+		@include button;
+		background-color: $dark;
+		color: $light;
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: calc($index * 2);
+		z-index: 1;
+	}
+}
